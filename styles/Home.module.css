@@ -1,4 +1,26 @@
-.container {
+/* .about_down_border { */
+/*Vertical*/
+/* background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 1px 3px;
+  background-repeat: repeat-y;
+} */
+
+
+/* .container {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 50vw;
+} */
+
+
+
+
+
+/* .container {
   padding: 0 2rem;
 }
 
@@ -113,4 +135,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
