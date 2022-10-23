@@ -11,17 +11,19 @@ export const Hero = ({ theme, cv }) => {
     const [open, setOpen] = useState(false);
     const [imgPath, setImgPath] = useState();
 
+    const pageTheme = theme;
+
     useEffect(() => {
-        theme === 'dark' ? setImgPath('hero-dark-entrance') : setImgPath('hero-white-entrance');
+        pageTheme === 'dark' ? setImgPath('hero-dark-entrance') : setImgPath('hero-white-entrance');
 
         return () => {
             setImgPath('');
         }
-    }, [theme]);
+    }, [pageTheme]);
 
     useEffect(() => {
         setTimeout(() => {
-            theme === 'dark' ? setImgPath('hero-dark-looping') : setImgPath('hero-white-looping');
+            pageTheme === 'dark' ? setImgPath('hero-dark-looping') : setImgPath('hero-white-looping');
         }, 2800);
     }, [imgPath]);
 
@@ -32,10 +34,10 @@ export const Hero = ({ theme, cv }) => {
 
                 <div className='font-bold space-y-3 text-4xl md:text-4xl lg:text-5xl text-slate-900 dark:text-white pl-3 md:pl-0 lg:pl-0'>
                     <p>
-                        Hi! I'm <span className='dark:text-yellow-300 text-red-500'>Salman</span><br />
+                        {`Hi! I'm`} <span className='dark:text-yellow-300 text-red-500'>{`Salman`}</span><br />
                     </p>
                     <p>
-                        I'm a Full Stack Developer.
+                        {`I'm a Full Stack Developer.`}
                     </p>
                 </div>
 
