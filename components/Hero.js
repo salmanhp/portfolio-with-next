@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiNetlify, SiVercel } from "react-icons/si";
 import { AiOutlineDown } from "react-icons/ai";
 import { Link } from 'react-scroll';
-
+import Linka from 'next/link';
 
 
 export const Hero = ({ theme, cv }) => {
@@ -42,12 +42,18 @@ export const Hero = ({ theme, cv }) => {
                 <div className='space-x-6 md:space-x-6 lg:space-x-6 mt-12 flex items-center justify-center md:justify-start lg:justify-start mx-3 sm:mx-auto'>
 
                     <div className="download-btn flex space-x-[0.5px] text-white relative">
-                        <a href={`${cv.cvURL}?dl=salman.pdf`} className='px-2 py-2 cursor-pointer rounded-tl rounded-bl shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-blue-600'>Download Resume</a>
+                        <Linka href={`${cv.cvURL}?dl=salman.pdf`}>
+                            <a className='px-2 py-2 cursor-pointer rounded-tl rounded-bl shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-blue-600'>Download Resume</a>
+                        </Linka>
                         <button onClick={() => setOpen(!open)} className='px-2 py-2 rounded-tr rounded-br shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out bg-blue-600'><AiOutlineDown /></button>
 
                         <div className={`${open ? 'block' : 'hidden'} absolute top-11 right-0 z-10 shadow-2xl shadow-gray-500 rounded-br rounded-bl bg-white/90 text-black`}>
-                            <a href={`${cv.cvURL}`} target="_blank" onClick={() => setOpen(!open)} className='block hover:bg-slate-300 px-4 py-2 cursor-pointer'>View Resume</a>
-                            <a href={`${cv.cvURL}?dl=salman.pdf`} onClick={() => setOpen(!open)} className='block hover:bg-slate-300 px-4 py-2 cursor-pointer'>Download Resume</a>
+                            <Linka href={`${cv.cvURL}`}>
+                                <a target="_blank" onClick={() => setOpen(!open)} className='block hover:bg-slate-300 px-4 py-2 cursor-pointer'>View Resume</a>
+                            </Linka>
+                            <Linka href={`${cv.cvURL}?dl=salman.pdf`}>
+                                <a onClick={() => setOpen(!open)} className='block hover:bg-slate-300 px-4 py-2 cursor-pointer'>Download Resume</a>
+                            </Linka>
                         </div>
 
                     </div>
@@ -59,18 +65,29 @@ export const Hero = ({ theme, cv }) => {
 
                 <div className="mt-14 md:mt-16 lg:mt-28 flex flex-row items-center justify-center md:justify-start lg:justify-start space-x-4 md:space-x-5 lg:space-x-5">
 
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://www.linkedin.com/in/salman-hossein-peada-734680198/">
-                        <BsLinkedin className="cursor-pointer" size={60} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://github.com/salmanhp">
-                        <BsGithub className="cursor-pointer" size={60} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://app.netlify.com/teams/peadasalman1819/overview">
-                        <SiNetlify className="cursor-pointer" size={60} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://vercel.com/dashboard">
-                        <SiVercel className="cursor-pointer" size={60} />
-                    </a>
+                    <Linka href="https://www.linkedin.com/in/salman-hossein-peada-734680198/">
+                        <a className="hover:text-[#129AB3]" target="_blank">
+                            <BsLinkedin className="cursor-pointer" size={60} />
+                        </a>
+                    </Linka>
+
+                    <Linka href="https://github.com/salmanhp">
+                        <a className="hover:text-[#129AB3]" target="_blank">
+                            <BsGithub className="cursor-pointer" size={60} />
+                        </a>
+                    </Linka>
+
+                    <Linka href="https://app.netlify.com/teams/peadasalman1819/overview">
+                        <a className="hover:text-[#129AB3]" target="_blank">
+                            <SiNetlify className="cursor-pointer" size={60} />
+                        </a>
+                    </Linka>
+
+                    <Linka href="https://vercel.com/dashboard">
+                        <a className="hover:text-[#129AB3]" target="_blank">
+                            <SiVercel className="cursor-pointer" size={60} />
+                        </a>
+                    </Linka>
                 </div>
 
             </div>

@@ -11,7 +11,7 @@ import { Client } from '../lib/client';
 // import styles from '../styles/Home.module.css';
 
 
-export default function Home({ aboutData, projectData, skillData, experiencesData, cvData }) {
+export default function Home({ aboutData, projectData, skillData, experiencesData, cvData, logoData }) {
   const { theme, setTheme } = useTheme();
   return (
     <div className='max-w-full lg:max-w-7xl lg:mx-auto'/* max-w-full px-[8%] max-w-7xl mx-auto  max-w-full px-[8%] lg:max-w-7xl lg:mx-auto */>
@@ -21,7 +21,7 @@ export default function Home({ aboutData, projectData, skillData, experiencesDat
         <link rel="icon" href="/salman-head-logo.png" />
       </Head>
 
-      <Navbar theme={theme} setTheme={setTheme} />
+      <Navbar theme={theme} setTheme={setTheme} logo={logoData.length && logoData[0]} />
       <Hero theme={theme} cv={cvData.length && cvData[0]} />
       <About about={aboutData.length && aboutData[0]} />
       <Project project={projectData} />
@@ -70,6 +70,9 @@ export const getServerSideProps = async () => {
   const experiencesQuery = `*[_type == "experiences"]`;
   const experiencesData = await Client.fetch(experiencesQuery);
 
+  const logoQuery = `*[_type == "logo"]`;
+  const logoData = await Client.fetch(logoQuery);
+
   const cvQuery = `*[_type == "cv"] {
     mycv,
     "cvURL": mycv.asset->url
@@ -77,6 +80,8 @@ export const getServerSideProps = async () => {
   const cvData = await Client.fetch(cvQuery);
 
   return {
-    props: { aboutData, projectData, skillData, experiencesData, cvData }
+    props: { aboutData, projectData, skillData, experiencesData, cvData, logoData }
   }
 }
+
+

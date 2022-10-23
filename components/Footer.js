@@ -1,6 +1,8 @@
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiNetlify, SiVercel } from "react-icons/si";
 import { Link } from 'react-scroll';
+import Linka from "next/link";
+
 
 
 export const Footer = () => {
@@ -20,19 +22,29 @@ export const Footer = () => {
                 </div>
 
                 <div className="social-media flex flex-col justify-center items-center space-y-2 text-white">
+                    <Linka href="https://www.linkedin.com/in/salman-hossein-peada-734680198/">
+                        <a target="_blank" className="hover:text-[#129AB3]">
+                            <BsLinkedin className="cursor-pointer" size={25} />
+                        </a>
+                    </Linka>
 
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://www.linkedin.com/in/salman-hossein-peada-734680198/">
-                        <BsLinkedin className="cursor-pointer" size={25} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://github.com/salmanhp">
-                        <BsGithub className="cursor-pointer" size={25} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://app.netlify.com/teams/peadasalman1819/overview">
-                        <SiNetlify className="cursor-pointer" size={25} />
-                    </a>
-                    <a className="hover:text-[#129AB3]" target="_blank" href="https://vercel.com/dashboard">
-                        <SiVercel className="cursor-pointer" size={25} />
-                    </a>
+                    <Linka href="https://github.com/salmanhp">
+                        <a target="_blank" className="hover:text-[#129AB3]">
+                            <BsGithub className="cursor-pointer" size={25} />
+                        </a>
+                    </Linka>
+
+                    <Linka href="https://app.netlify.com/teams/peadasalman1819/overview">
+                        <a target="_blank" className="hover:text-[#129AB3]">
+                            <SiNetlify className="cursor-pointer" size={25} />
+                        </a>
+                    </Linka>
+
+                    <Linka href="https://vercel.com/dashboard">
+                        <a target="_blank" className="hover:text-[#129AB3]">
+                            <SiVercel className="cursor-pointer" size={25} />
+                        </a>
+                    </Linka>
                 </div>
 
             </div>
@@ -43,3 +55,5 @@ export const Footer = () => {
         </div>
     )
 }
+
+

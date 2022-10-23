@@ -3,12 +3,12 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { urlFor } from '../lib/client';
 
 
 
-
-
-export const Navbar = ({ theme, setTheme }) => {
+export const Navbar = ({ theme, setTheme, logo }) => {
     const dm = theme === 'light' ? true : false;
     const [isDarkMode, setDarkMode] = useState(dm); //false
     const [open, setOpen] = useState(false);
@@ -24,7 +24,7 @@ export const Navbar = ({ theme, setTheme }) => {
     return (
         <div className='flex justify-between items-center sticky top-0 mt-4 px-3 md:px-5 z-10 bg-white/25 dark:bg-[#121212]/25 backdrop-blur-xl border border-white/20 dark:border-[#121212]/20'>
             <Link spy={true} to="Home" offset={-200} smooth={true}>
-                <img src="images/salman-logo.png" className='object-contain cursor-pointer' alt="Salman" width="100" height="100" />
+                <Image src={urlFor(logo.headerlogo).url()} className='object-contain cursor-pointer' alt="Salman-logo" width="100" height="100" />
             </Link>
 
             <nav className="hidden md:hidden lg:flex justify-center items-center space-x-10">
