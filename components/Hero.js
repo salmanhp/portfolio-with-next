@@ -96,7 +96,7 @@ export const Hero = ({ theme, cv }) => {
 
             <div className='h-right w-full md:w-1/2 lg:w-1/2 justify-center'>
                 <div className='flex justify-center items-center mt-9 md:mt-0 lg:mt-0'>
-                    <Image src={`/images/${imgPath}.gif`} alt='hero' width="500" height="500" />
+                    <Image src={`/${imgPath}.gif`} alt='hero' width="500" height="500" />
                 </div>
 
             </div>

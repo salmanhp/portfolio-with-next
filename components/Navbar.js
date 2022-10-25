@@ -49,8 +49,13 @@ export const Navbar = ({ theme, setTheme, logo }) => {
                 <FiMenu className='lg:hidden block cursor-pointer' size={30} onClick={() => setOpen(!open)} />
 
                 <motion.nav
-                    whileInView={{ x: [300, 0] }}
-                    transition={{ duration: 0.85, ease: "easeOut" }}
+                    animate={open ? "open" : "closed"}
+                    variants={{
+                        open: { opacity: 1, x: [0, 4] },
+                        closed: { opacity: 0, x: 0 },
+                    }}
+                    transition={{ duration: 1 }}
+
                     className={`h-100v w-4/5 md:w-3/6 fixed top-0 right-0 p-5 bg-white dark:bg-[#121212] shadow-lg shadow-blue-400 ${open ? 'block' : 'hidden'}`}
                 >
                     <div className='flex justify-between items-center mb-10'>

@@ -51,8 +51,8 @@ export const About = ({ about }) => {
 
                     <div className="flex flex-col relative max-w-xl mx-auto mt-10 md:mt-8 lg:mt-8">
 
-                        <div className="flex flex-col items-start">
-                            <div>
+                        <div className="flex flex-col items-end md:items-start lg:items-start">
+                            <div className="mr-6 md:mr-0 lg:mr-0">
                                 <p className="text-xl font-medium">B.Tech CSE</p>
                                 <p className="text-gray-500">Jaipur - UEM University</p>
                                 <p className="text-gray-400 mt-2 flex items-center"><GoCalendar className="mr-2" /> 2019 - Present</p>
@@ -60,15 +60,15 @@ export const About = ({ about }) => {
                         </div>
 
                         <div className="flex flex-col items-end mt-10">
-                            <div>
+                            <div className="mr-1 md:mr-0 lg:mr-0">
                                 <p className="text-xl font-medium">Secondary Education</p>
                                 <p className="text-gray-500">West Bengal - Institute</p>
                                 <p className="text-gray-400 mt-2 flex items-center"><GoCalendar className="mr-2" /> 2016 - 2017</p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-start mt-12">
-                            <div>
+                        <div className="flex flex-col items-end md:items-start lg:items-start mt-12">
+                            <div className="mr-6 md:mr-0 lg:mr-0">
                                 <p className="text-xl font-medium">Higher Secondary</p>
                                 <p className="text-gray-500">West Bengal - Institute</p>
                                 <p className="text-gray-400 mt-2 flex items-center"><GoCalendar className="mr-2" /> 2017 - 2019</p>
@@ -77,8 +77,8 @@ export const About = ({ about }) => {
 
 
 
-                        <div className="about_down_border w-[2px] h-[273px] absolute top-0 left-1/2 bg-blue-300"></div>
-                        <div className="absolute left-[273px] -top-4">
+                        <div className="about_down_border w-[2px] h-[273px] absolute top-0 left-10 md:left-1/2 lg:left-1/2 bg-blue-300"></div>
+                        <div className="absolute left-[25px] md:left-[273px] lg:left-[273px] -top-4">
                             <BsDot className="relative top-0 text-blue-600 z-10" size={32} />
                             <BsDot className="relative top-28 text-blue-600 z-10" size={32} />
                             <BsDot className="relative top-52 text-blue-600 z-10" size={32} />
