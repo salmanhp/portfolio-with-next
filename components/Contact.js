@@ -35,12 +35,12 @@ export const Contact = () => {
             <div className="contact-info flex flex-col md:flex-row lg:flex-row justify-center space-y-3 md:space-y-0 lg:space-y-0 space-x-0 md:space-x-8 lg:space-x-8">
 
                 <a className="flex items-center justify-center space-x-2 md:space-x-4 lg:space-x-4 bg-red-100 w-full md:w-80 lg:w-80 px-1 md:px-0 lg:px-0 py-2 rounded-md" href="mailto:peadasalman1819@gmail.com">
-                    <Image src="/email.png" alt="email" width="35" height="35" />
+                    <Image src="/images/email.png" alt="email" width="35" height="35" />
                     <p className="text-slate-900">peadasalman1819@gmail.com</p>
                 </a>
 
                 <a className="flex items-center justify-center space-x-4 bg-blue-100 w-full md:w-80 lg:w-80 py-2 rounded-md" href="tel:+91 8617873420">
-                    <Image src="/mobile.png" alt="mobile" width="35" height="35" />
+                    <Image src="/images/mobile.png" alt="mobile" width="35" height="35" />
                     <p className="text-slate-900">8617873420</p>
                 </a>
 
