@@ -55,7 +55,7 @@ export const About = ({ about }) => {
                             <div className="mr-6 md:mr-0 lg:mr-0">
                                 <p className="text-xl font-medium">B.Tech CSE</p>
                                 <p className="text-gray-500">Jaipur - UEM University</p>
-                                <p className="text-gray-400 mt-2 flex items-center"><GoCalendar className="mr-2" /> 2019 - Present</p>
+                                <p className="text-gray-400 mt-2 flex items-center"><GoCalendar className="mr-2" /> 2019 - 2023</p>
                             </div>
                         </div>
 
