@@ -19,7 +19,7 @@ export const Hero = ({ theme, cv }) => {
         return () => {
             setImgPath('');
         }
-    }, [pageTheme]);
+    }, [, pageTheme]);
 
     useEffect(() => {
         setTimeout(() => {
