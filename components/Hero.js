@@ -19,13 +19,13 @@ export const Hero = ({ theme, cv }) => {
         return () => {
             setImgPath('');
         }
-    }, [, pageTheme]);
+    }, [pageTheme]);
 
     useEffect(() => {
         setTimeout(() => {
             pageTheme === 'dark' ? setImgPath('hero-dark-looping') : setImgPath('hero-white-looping');
         }, 2800);
-    }, [imgPath, pageTheme]);
+    }, [imgPath]);
 
 
     return (
