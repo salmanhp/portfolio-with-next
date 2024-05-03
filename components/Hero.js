@@ -25,7 +25,7 @@ export const Hero = ({ theme, cv }) => {
         setTimeout(() => {
             pageTheme === 'dark' ? setImgPath('hero-dark-looping') : setImgPath('hero-white-looping');
         }, 2800);
-    }, [imgPath]);
+    }, [imgPath, pageTheme]);
 
 
     return (
